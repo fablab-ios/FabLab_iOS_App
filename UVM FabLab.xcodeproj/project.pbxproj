@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		13A90314477228F7E416E94B /* Pods_UVM_FabLab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A5BA8EB972FF268697CE77 /* Pods_UVM_FabLab.framework */; };
+		2513D45422628D3F0032AA8F /* SearchBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2513D45322628D3F0032AA8F /* SearchBarDelegate.swift */; };
 		BF0B65E4222CCD49007693B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF0B65E3222CCD49007693B8 /* Assets.xcassets */; };
 		BF0BCCFC22551757008942B6 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0BCCFB22551757008942B6 /* InfoViewController.swift */; };
 		BF4DE10622417CF100C80898 /* TicketTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4DE10522417CF100C80898 /* TicketTableViewController.swift */; };
-		BF4DE1082243FC3D00C80898 /* Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4DE1072243FC3D00C80898 /* Progress.swift */; };
 		BFA1A688222CBABB00D9B167 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA1A687222CBABB00D9B167 /* AppDelegate.swift */; };
 		BFA1A68F222CBABB00D9B167 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFA1A68D222CBABB00D9B167 /* Main.storyboard */; };
 		BFA1A694222CBAC200D9B167 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFA1A692222CBAC200D9B167 /* LaunchScreen.storyboard */; };
@@ -39,13 +39,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2513D45322628D3F0032AA8F /* SearchBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarDelegate.swift; sourceTree = "<group>"; };
 		82A5BA8EB972FF268697CE77 /* Pods_UVM_FabLab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UVM_FabLab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FB224CEF6D068047ECBB622 /* Pods-UVM FabLab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UVM FabLab.debug.xcconfig"; path = "Target Support Files/Pods-UVM FabLab/Pods-UVM FabLab.debug.xcconfig"; sourceTree = "<group>"; };
 		BF0B65E3222CCD49007693B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF0BCCFB22551757008942B6 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
-		BF366A5A2261110A00284DFF /* Raleway-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Regular.ttf"; path = "UVM FabLab/Assets.xcassets/Raleway-Regular.dataset/Raleway-Regular.ttf"; sourceTree = SOURCE_ROOT; };
+		BF366A5A2261110A00284DFF /* Raleway-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Regular.ttf"; path = "UVM FabLab/Additional/Assets.xcassets/Raleway-Regular.dataset/Raleway-Regular.ttf"; sourceTree = SOURCE_ROOT; };
 		BF4DE10522417CF100C80898 /* TicketTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketTableViewController.swift; sourceTree = "<group>"; };
-		BF4DE1072243FC3D00C80898 /* Progress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Progress.swift; sourceTree = "<group>"; };
 		BFA1A684222CBABB00D9B167 /* UVM FabLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UVM FabLab.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFA1A687222CBABB00D9B167 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFA1A68E222CBABB00D9B167 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -57,8 +57,8 @@
 		BFA1A6A5222CBAC200D9B167 /* UVM FabLabUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UVM FabLabUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFA1A6A9222CBAC200D9B167 /* UVM_FabLabUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UVM_FabLabUITests.swift; sourceTree = "<group>"; };
 		BFA1A6AB222CBAC200D9B167 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BFDE6F3A222DB89A00914696 /* Gobold_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Gobold_Bold.ttf; path = "UVM FabLab/Assets.xcassets/Gobold_Bold.dataset/Gobold_Bold.ttf"; sourceTree = SOURCE_ROOT; };
-		BFDE6F3C222DB8B900914696 /* Brown-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Brown-Regular.ttf"; path = "../UVM FabLab/Assets.xcassets/Brown-Regular.dataset/Brown-Regular.ttf"; sourceTree = "<group>"; };
+		BFDE6F3A222DB89A00914696 /* Gobold_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Gobold_Bold.ttf; path = "UVM FabLab/Additional/Assets.xcassets/Gobold_Bold.dataset/Gobold_Bold.ttf"; sourceTree = SOURCE_ROOT; };
+		BFDE6F3C222DB8B900914696 /* Brown-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Brown-Regular.ttf"; path = "../UVM FabLab/Additional/Assets.xcassets/Brown-Regular.dataset/Brown-Regular.ttf"; sourceTree = "<group>"; };
 		D7061C160EF60D37624BDEF2 /* Pods-UVM FabLab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UVM FabLab.release.xcconfig"; path = "Target Support Files/Pods-UVM FabLab/Pods-UVM FabLab.release.xcconfig"; sourceTree = "<group>"; };
 		DE9C3BD5C5CC6B96C0CDE137 /* Pods_UVM_FabLabTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UVM_FabLabTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F197C88BC6EEE53846C91A53 /* Pods_UVM_FabLabUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UVM_FabLabUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +90,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2513D44F226287780032AA8F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2513D450226287900032AA8F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2513D451226287970032AA8F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BF0BCCFB22551757008942B6 /* InfoViewController.swift */,
+				BF4DE10522417CF100C80898 /* TicketTableViewController.swift */,
+				2513D45322628D3F0032AA8F /* SearchBarDelegate.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2513D452226287D80032AA8F /* Additional */ = {
+			isa = PBXGroup;
+			children = (
+				BFA1A687222CBABB00D9B167 /* AppDelegate.swift */,
+				BFA1A68D222CBABB00D9B167 /* Main.storyboard */,
+				BF0B65E3222CCD49007693B8 /* Assets.xcassets */,
+				BFA1A692222CBAC200D9B167 /* LaunchScreen.storyboard */,
+			);
+			path = Additional;
+			sourceTree = "<group>";
+		};
 		251AD42869EAAB13F400F25D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,14 +170,11 @@
 		BFA1A686222CBABB00D9B167 /* UVM FabLab */ = {
 			isa = PBXGroup;
 			children = (
-				BFA1A687222CBABB00D9B167 /* AppDelegate.swift */,
-				BFA1A68D222CBABB00D9B167 /* Main.storyboard */,
-				BF0B65E3222CCD49007693B8 /* Assets.xcassets */,
-				BFA1A692222CBAC200D9B167 /* LaunchScreen.storyboard */,
 				BFA1A695222CBAC200D9B167 /* Info.plist */,
-				BF4DE10522417CF100C80898 /* TicketTableViewController.swift */,
-				BF4DE1072243FC3D00C80898 /* Progress.swift */,
-				BF0BCCFB22551757008942B6 /* InfoViewController.swift */,
+				2513D452226287D80032AA8F /* Additional */,
+				2513D450226287900032AA8F /* View */,
+				2513D44F226287780032AA8F /* Model */,
+				2513D451226287970032AA8F /* Controller */,
 			);
 			path = "UVM FabLab";
 			sourceTree = "<group>";
@@ -357,8 +389,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2513D45422628D3F0032AA8F /* SearchBarDelegate.swift in Sources */,
 				BFA1A688222CBABB00D9B167 /* AppDelegate.swift in Sources */,
-				BF4DE1082243FC3D00C80898 /* Progress.swift in Sources */,
 				BF4DE10622417CF100C80898 /* TicketTableViewController.swift in Sources */,
 				BF0BCCFC22551757008942B6 /* InfoViewController.swift in Sources */,
 			);

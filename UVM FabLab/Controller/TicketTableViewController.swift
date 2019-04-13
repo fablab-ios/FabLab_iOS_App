@@ -9,9 +9,12 @@
 import UIKit
 
 class TicketTableViewController: UITableViewController {
-
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        searchBar.delegate = self
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
