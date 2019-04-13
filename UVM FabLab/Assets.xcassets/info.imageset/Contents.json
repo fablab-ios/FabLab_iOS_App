@@ -12,6 +12,11 @@
     },
     {
       "idiom" : "universal",
+      "filename" : "Info@3x-1.png",
+      "scale" : "3x"
+    },
+    {
+      "idiom" : "universal",
       "filename" : "Info@3x.png",
       "scale" : "3x"
     }

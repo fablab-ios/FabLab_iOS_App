@@ -9,9 +9,10 @@
 /* Begin PBXBuildFile section */
 		13A90314477228F7E416E94B /* Pods_UVM_FabLab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A5BA8EB972FF268697CE77 /* Pods_UVM_FabLab.framework */; };
 		BF0B65E4222CCD49007693B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF0B65E3222CCD49007693B8 /* Assets.xcassets */; };
+		BF0BCCFC22551757008942B6 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0BCCFB22551757008942B6 /* InfoViewController.swift */; };
 		BF4DE10622417CF100C80898 /* TicketTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4DE10522417CF100C80898 /* TicketTableViewController.swift */; };
+		BF4DE1082243FC3D00C80898 /* Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4DE1072243FC3D00C80898 /* Progress.swift */; };
 		BFA1A688222CBABB00D9B167 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA1A687222CBABB00D9B167 /* AppDelegate.swift */; };
-		BFA1A68A222CBABB00D9B167 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA1A689222CBABB00D9B167 /* FirstViewController.swift */; };
 		BFA1A68F222CBABB00D9B167 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFA1A68D222CBABB00D9B167 /* Main.storyboard */; };
 		BFA1A694222CBAC200D9B167 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFA1A692222CBAC200D9B167 /* LaunchScreen.storyboard */; };
 		BFA1A69F222CBAC200D9B167 /* UVM_FabLabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA1A69E222CBAC200D9B167 /* UVM_FabLabTests.swift */; };
@@ -48,10 +49,18 @@
 		82A5BA8EB972FF268697CE77 /* Pods_UVM_FabLab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UVM_FabLab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FB224CEF6D068047ECBB622 /* Pods-UVM FabLab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UVM FabLab.debug.xcconfig"; path = "Target Support Files/Pods-UVM FabLab/Pods-UVM FabLab.debug.xcconfig"; sourceTree = "<group>"; };
 		BF0B65E3222CCD49007693B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BF0BCCFB22551757008942B6 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		BF366A58226110C300284DFF /* Raleway-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-ThinItalic.ttf"; path = "../../../Downloads/Raleway-ThinItalic.ttf"; sourceTree = "<group>"; };
+		BF366A59226110E200284DFF /* Raleway-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Thin.ttf"; path = "../../../Downloads/Raleway-Thin.ttf"; sourceTree = "<group>"; };
+		BF366A5A2261110A00284DFF /* Raleway-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Regular.ttf"; path = "../../../Downloads/Raleway-Regular.ttf"; sourceTree = "<group>"; };
+		BF366A5B2261111400284DFF /* Raleway-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-MediumItalic.ttf"; path = "../../../Downloads/Raleway-MediumItalic.ttf"; sourceTree = "<group>"; };
+		BF366A5C2261111D00284DFF /* Raleway-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Medium.ttf"; path = "../../../Downloads/Raleway-Medium.ttf"; sourceTree = "<group>"; };
+		BF366A5D2261112A00284DFF /* Raleway-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Light.ttf"; path = "../../../Downloads/Raleway-Light.ttf"; sourceTree = "<group>"; };
+		BF366A5E2261114C00284DFF /* Raleway-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-LightItalic.ttf"; path = "../../../Downloads/Raleway-LightItalic.ttf"; sourceTree = "<group>"; };
 		BF4DE10522417CF100C80898 /* TicketTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketTableViewController.swift; sourceTree = "<group>"; };
+		BF4DE1072243FC3D00C80898 /* Progress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Progress.swift; sourceTree = "<group>"; };
 		BFA1A684222CBABB00D9B167 /* UVM FabLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UVM FabLab.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFA1A687222CBABB00D9B167 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BFA1A689222CBABB00D9B167 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		BFA1A68E222CBABB00D9B167 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BFA1A693222CBAC200D9B167 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFA1A695222CBAC200D9B167 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -147,12 +156,13 @@
 			isa = PBXGroup;
 			children = (
 				BFA1A687222CBABB00D9B167 /* AppDelegate.swift */,
-				BFA1A689222CBABB00D9B167 /* FirstViewController.swift */,
 				BFA1A68D222CBABB00D9B167 /* Main.storyboard */,
 				BF0B65E3222CCD49007693B8 /* Assets.xcassets */,
 				BFA1A692222CBAC200D9B167 /* LaunchScreen.storyboard */,
 				BFA1A695222CBAC200D9B167 /* Info.plist */,
 				BF4DE10522417CF100C80898 /* TicketTableViewController.swift */,
+				BF4DE1072243FC3D00C80898 /* Progress.swift */,
+				BF0BCCFB22551757008942B6 /* InfoViewController.swift */,
 			);
 			path = "UVM FabLab";
 			sourceTree = "<group>";
@@ -184,9 +194,16 @@
 				BFDE6F43222DBB1100914696 /* Brown-Bold.ttf */,
 				BFDE6F44222DBB1100914696 /* Brown-BoldItalic.ttf */,
 				BFDE6F45222DBB1100914696 /* Brown-Light.ttf */,
+				BF366A5C2261111D00284DFF /* Raleway-Medium.ttf */,
+				BF366A5D2261112A00284DFF /* Raleway-Light.ttf */,
 				BFDE6F42222DBB1100914696 /* Brown-LightItalic.ttf */,
 				BFDE6F46222DBB1100914696 /* Brown-RegularItalic.ttf */,
+				BF366A5B2261111400284DFF /* Raleway-MediumItalic.ttf */,
+				BF366A5A2261110A00284DFF /* Raleway-Regular.ttf */,
 				BFDE6F3C222DB8B900914696 /* Brown-Regular.ttf */,
+				BF366A5E2261114C00284DFF /* Raleway-LightItalic.ttf */,
+				BF366A59226110E200284DFF /* Raleway-Thin.ttf */,
+				BF366A58226110C300284DFF /* Raleway-ThinItalic.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -381,8 +398,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFA1A688222CBABB00D9B167 /* AppDelegate.swift in Sources */,
-				BFA1A68A222CBABB00D9B167 /* FirstViewController.swift in Sources */,
+				BF4DE1082243FC3D00C80898 /* Progress.swift in Sources */,
 				BF4DE10622417CF100C80898 /* TicketTableViewController.swift in Sources */,
+				BF0BCCFC22551757008942B6 /* InfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

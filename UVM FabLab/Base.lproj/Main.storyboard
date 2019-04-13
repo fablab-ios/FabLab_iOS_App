@@ -12,7 +12,7 @@
         <!--Info-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController title="Info" id="9pv-A4-QxB" customClass="FirstViewController" customModule="UVM_FabLab" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Info" id="9pv-A4-QxB" customClass="InfoViewController" customModule="UVM_FabLab" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Info" image="info" id="acW-dT-cKf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -74,7 +74,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="info" width="50" height="50"/>
-        <image name="tickets" width="50" height="50"/>
+        <image name="info" width="20" height="20"/>
+        <image name="tickets" width="25" height="25"/>
     </resources>
 </document>

@@ -1,8 +1,8 @@
 //
-//  FirstViewController.swift
+//  InfoViewController.swift
 //  UVM FabLab
 //
-//  Created by Abby Linstone on 3/3/19.
+//  Created by Abby Linstone on 2/14/19.
 //  Copyright © 2019 UVM. All rights reserved.
 //
 
@@ -14,11 +14,15 @@ private let infoText = UILabel()
 private let imageView = UIImageView()
 private let label1 = UILabel()
 private let label2 = UITextView()
+private let mainTxtLabel1 = UILabel()
+private let mainTxtLabel2 = UILabel()
 
-class FirstViewController: UIViewController {
-    
+class InfoViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Do any additional setup after loading the view.
         view.backgroundColor = .gray
         
         scrollView.contentInsetAdjustmentBehavior = .never
@@ -35,17 +39,17 @@ class FirstViewController: UIViewController {
         label1.font = UIFont(name: "GoboldBold", size: CGFloat(30))
         label1.backgroundColor = #colorLiteral(red: 0.937254902, green: 0.937254902, blue: 0.9568627451, alpha: 1)
         label1.clipsToBounds = true
-
+        
         label2.frame = CGRect(x:0, y:0, width:imageView.frame.width , height:imageView.frame.height)
         label2.text = "\n An incubator for ideas and a place to engage people’s imaginations, the UVM FabLab makes rapid-prototyping tools available to UVM students and faculty."
         label2.textAlignment = .center
         label2.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-        label2.font = UIFont(name: "Brown-Regular", size: CGFloat(12))
+        label2.font = UIFont(name: "Raleway-Regular", size: CGFloat(12))
         label2.backgroundColor = #colorLiteral(red: 0.937254902, green: 0.937254902, blue: 0.9568627451, alpha: 1)
         label2.clipsToBounds = true
         
         infoText.textColor = .black
-        infoText.font = UIFont(name: "Brown-Regular", size: CGFloat(14))
+        infoText.font = UIFont(name: "Raleway-Regular", size: CGFloat(14))
         infoText.numberOfLines = 0
         let text =  """
                     Lorem ipsum dolor sit amet, in alia adhuc aperiri nam. Movet scripta tractatos cu eum, sale commodo meliore ea eam, per commodo atomorum ea. Unum graeci iriure nec an, ea sit habeo movet electram. Id eius assum persius pro, id cum falli accusam. Has eu fierent partiendo, doming expetenda interesset cu mel, tempor possit vocent in nam. Iusto tollit ad duo, est at vidit vivendo liberavisse, vide munere nonumy sed ex.
@@ -53,6 +57,16 @@ class FirstViewController: UIViewController {
                     Quod possit expetendis id qui, consequat vituperata ad eam. Per cu elit latine vivendum. Ei sit nullam aliquam, an ferri epicuri quo. Ex vim tibique accumsan erroribus. In per libris verear adipiscing. Purto aliquid lobortis ea quo, ea utinam oportere qui.
                     """
         infoText.text = text + text + text
+        
+//        let labelContainer = UIView()
+//        labelContainer.backgroundColor = #colorLiteral(red: 0.937254902, green: 0.937254902, blue: 0.9568627451, alpha: 1)
+//        mainTxtLabel1.frame = CGRect(x:0, y:0, width:0.2 , height: 0.4)
+//        mainTxtLabel1.text = "FAQs"
+//
+//        let labelContainer2 = UIView()
+//        labelContainer2.backgroundColor = #colorLiteral(red: 0.937254902, green: 0.937254902, blue: 0.9568627451, alpha: 1)
+//        mainTxtLabel2.frame = CGRect(x:0, y:0, width:0.2 , height: 0.4)
+//        mainTxtLabel2.text = "General Information"
         
         let textContainer = UIView()
         textContainer.backgroundColor = #colorLiteral(red: 0.937254902, green: 0.937254902, blue: 0.9568627451, alpha: 1)
@@ -65,12 +79,16 @@ class FirstViewController: UIViewController {
         imageView.addSubview(label1)
         imageView.addSubview(label2)
         textContainer.addSubview(infoText)
+
+        infoText.addSubview(mainTxtLabel1)
+        infoText.addSubview(mainTxtLabel2)
         
         scrollView.snp.makeConstraints {
             make in
             
             make.edges.equalTo(view)
         }
+        
         
         imageView.snp.makeConstraints {
             make in
@@ -91,18 +109,16 @@ class FirstViewController: UIViewController {
             make in
             
             make.width.equalTo(250)
-            make.height.equalTo(80)
+            make.height.equalTo(90)
             make.centerX.equalTo(150)
             make.centerY.equalTo(180)
         }
         textContainer.snp.makeConstraints {
             make in
-            
-            make.top.equalTo(imageView.snp.bottom)
+        make.top.equalTo(imageView.snp.bottom)
             make.left.right.equalTo(view)
             make.bottom.equalTo(scrollView)
         }
-        
         infoText.snp.makeConstraints {
             make in
             
@@ -110,8 +126,17 @@ class FirstViewController: UIViewController {
         }
     }
     
+    }
     
 
-}
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
 
 

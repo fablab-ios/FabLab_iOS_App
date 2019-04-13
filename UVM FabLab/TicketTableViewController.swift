@@ -23,34 +23,34 @@ class TicketTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return 1
     }
-    
+    // number of tickets
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Section \(section)"
+        return "Tickets"
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let intArray = [3, 4, 5, 0]
         let cell = tableView.dequeueReusableCell(withIdentifier: "LabelCell", for: indexPath)
         
-        cell.textLabel?.text = "Section \(indexPath.section) Row \(indexPath.row)"
+        cell.textLabel?.text = "Ticket Number \(indexPath.row)"
+        let progressView = UIProgressView(progressViewStyle: .default)
+        //setting height of progressView
+        progressView.frame = CGRect(x: 230, y: 20, width: 130, height: 130)
+        //progressView.progress += 2
+        progressView.rightAnchor.accessibilityActivate()
+        progressView.setProgress(Float(intArray.randomElement()!), animated: false)
+        progressView.progressTintColor = #colorLiteral(red: 0, green: 0.4431372549, blue: 0.3333333333, alpha: 1)
+        cell.contentView.addSubview(progressView)
+        
         
         return cell
     }
-    
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
 
     /*
     // Override to support conditional editing of the table view.
