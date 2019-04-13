@@ -11,6 +11,8 @@ import UIKit
 class TicketTableViewController: UITableViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     
+    var tickets: [Ticket] = []
+    
     let fabWebAPI = FabWebAPI()
     
     override func viewDidLoad() {
@@ -32,7 +34,7 @@ class TicketTableViewController: UITableViewController {
     }
     // number of tickets
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return tickets.count
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -43,7 +45,7 @@ class TicketTableViewController: UITableViewController {
         let intArray = [3, 4, 5, 0]
         let cell = tableView.dequeueReusableCell(withIdentifier: "LabelCell", for: indexPath)
         
-        cell.textLabel?.text = "Ticket Number \(indexPath.row)"
+        cell.textLabel?.text = "\(tickets[indexPath.row].studentName)"
         let progressView = UIProgressView(progressViewStyle: .default)
         //setting height of progressView
         progressView.frame = CGRect(x: 230, y: 20, width: 130, height: 130)

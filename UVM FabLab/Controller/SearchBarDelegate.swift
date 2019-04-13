@@ -19,7 +19,10 @@ extension TicketTableViewController : UISearchBarDelegate {
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        self.fabWebAPI.getTickets(searchTerm: "test")
+        self.fabWebAPI.getTickets(searchTerm: searchText, callback: { (tickets) in
+            self.tickets = tickets
+            self.tableView.reloadData()
+        })
     }
 }
 
