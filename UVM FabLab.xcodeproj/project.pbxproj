@@ -19,13 +19,6 @@
 		BFA1A6AA222CBAC200D9B167 /* UVM_FabLabUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA1A6A9222CBAC200D9B167 /* UVM_FabLabUITests.swift */; };
 		BFDE6F3B222DB89A00914696 /* Gobold_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFDE6F3A222DB89A00914696 /* Gobold_Bold.ttf */; };
 		BFDE6F3D222DB8B900914696 /* Brown-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFDE6F3C222DB8B900914696 /* Brown-Regular.ttf */; };
-		BFDE6F3F222DBADF00914696 /* Gobold Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFDE6F3E222DBADF00914696 /* Gobold Regular.ttf */; };
-		BFDE6F41222DBAF200914696 /* Gobold Bold Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFDE6F40222DBAF200914696 /* Gobold Bold Italic.ttf */; };
-		BFDE6F47222DBB1100914696 /* Brown-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFDE6F42222DBB1100914696 /* Brown-LightItalic.ttf */; };
-		BFDE6F48222DBB1100914696 /* Brown-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFDE6F43222DBB1100914696 /* Brown-Bold.ttf */; };
-		BFDE6F49222DBB1100914696 /* Brown-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFDE6F44222DBB1100914696 /* Brown-BoldItalic.ttf */; };
-		BFDE6F4A222DBB1100914696 /* Brown-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFDE6F45222DBB1100914696 /* Brown-Light.ttf */; };
-		BFDE6F4B222DBB1100914696 /* Brown-RegularItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFDE6F46222DBB1100914696 /* Brown-RegularItalic.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,13 +43,7 @@
 		9FB224CEF6D068047ECBB622 /* Pods-UVM FabLab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UVM FabLab.debug.xcconfig"; path = "Target Support Files/Pods-UVM FabLab/Pods-UVM FabLab.debug.xcconfig"; sourceTree = "<group>"; };
 		BF0B65E3222CCD49007693B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF0BCCFB22551757008942B6 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
-		BF366A58226110C300284DFF /* Raleway-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-ThinItalic.ttf"; path = "../../../Downloads/Raleway-ThinItalic.ttf"; sourceTree = "<group>"; };
-		BF366A59226110E200284DFF /* Raleway-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Thin.ttf"; path = "../../../Downloads/Raleway-Thin.ttf"; sourceTree = "<group>"; };
-		BF366A5A2261110A00284DFF /* Raleway-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Regular.ttf"; path = "../../../Downloads/Raleway-Regular.ttf"; sourceTree = "<group>"; };
-		BF366A5B2261111400284DFF /* Raleway-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-MediumItalic.ttf"; path = "../../../Downloads/Raleway-MediumItalic.ttf"; sourceTree = "<group>"; };
-		BF366A5C2261111D00284DFF /* Raleway-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Medium.ttf"; path = "../../../Downloads/Raleway-Medium.ttf"; sourceTree = "<group>"; };
-		BF366A5D2261112A00284DFF /* Raleway-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Light.ttf"; path = "../../../Downloads/Raleway-Light.ttf"; sourceTree = "<group>"; };
-		BF366A5E2261114C00284DFF /* Raleway-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-LightItalic.ttf"; path = "../../../Downloads/Raleway-LightItalic.ttf"; sourceTree = "<group>"; };
+		BF366A5A2261110A00284DFF /* Raleway-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Regular.ttf"; path = "UVM FabLab/Assets.xcassets/Raleway-Regular.dataset/Raleway-Regular.ttf"; sourceTree = SOURCE_ROOT; };
 		BF4DE10522417CF100C80898 /* TicketTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketTableViewController.swift; sourceTree = "<group>"; };
 		BF4DE1072243FC3D00C80898 /* Progress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Progress.swift; sourceTree = "<group>"; };
 		BFA1A684222CBABB00D9B167 /* UVM FabLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UVM FabLab.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,15 +57,8 @@
 		BFA1A6A5222CBAC200D9B167 /* UVM FabLabUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UVM FabLabUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFA1A6A9222CBAC200D9B167 /* UVM_FabLabUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UVM_FabLabUITests.swift; sourceTree = "<group>"; };
 		BFA1A6AB222CBAC200D9B167 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BFDE6F3A222DB89A00914696 /* Gobold_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Gobold_Bold.ttf; path = ../../../Downloads/Gobold/Gobold_Bold.ttf; sourceTree = "<group>"; };
-		BFDE6F3C222DB8B900914696 /* Brown-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Brown-Regular.ttf"; path = "../../../Downloads/Brown-Regular.ttf"; sourceTree = "<group>"; };
-		BFDE6F3E222DBADF00914696 /* Gobold Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Gobold Regular.ttf"; path = "../../../Downloads/gobold (3)/Gobold Regular.ttf"; sourceTree = "<group>"; };
-		BFDE6F40222DBAF200914696 /* Gobold Bold Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Gobold Bold Italic.ttf"; path = "../../../Downloads/gobold (3)/Gobold Bold Italic.ttf"; sourceTree = "<group>"; };
-		BFDE6F42222DBB1100914696 /* Brown-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Brown-LightItalic.ttf"; path = "../../../Downloads/Brown-LightItalic.ttf"; sourceTree = "<group>"; };
-		BFDE6F43222DBB1100914696 /* Brown-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Brown-Bold.ttf"; path = "../../../Downloads/Brown-Bold.ttf"; sourceTree = "<group>"; };
-		BFDE6F44222DBB1100914696 /* Brown-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Brown-BoldItalic.ttf"; path = "../../../Downloads/Brown-BoldItalic.ttf"; sourceTree = "<group>"; };
-		BFDE6F45222DBB1100914696 /* Brown-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Brown-Light.ttf"; path = "../../../Downloads/Brown-Light.ttf"; sourceTree = "<group>"; };
-		BFDE6F46222DBB1100914696 /* Brown-RegularItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Brown-RegularItalic.ttf"; path = "../../../Downloads/Brown-RegularItalic.ttf"; sourceTree = "<group>"; };
+		BFDE6F3A222DB89A00914696 /* Gobold_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Gobold_Bold.ttf; path = "UVM FabLab/Assets.xcassets/Gobold_Bold.dataset/Gobold_Bold.ttf"; sourceTree = SOURCE_ROOT; };
+		BFDE6F3C222DB8B900914696 /* Brown-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Brown-Regular.ttf"; path = "../UVM FabLab/Assets.xcassets/Brown-Regular.dataset/Brown-Regular.ttf"; sourceTree = "<group>"; };
 		D7061C160EF60D37624BDEF2 /* Pods-UVM FabLab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UVM FabLab.release.xcconfig"; path = "Target Support Files/Pods-UVM FabLab/Pods-UVM FabLab.release.xcconfig"; sourceTree = "<group>"; };
 		DE9C3BD5C5CC6B96C0CDE137 /* Pods_UVM_FabLabTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UVM_FabLabTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F197C88BC6EEE53846C91A53 /* Pods_UVM_FabLabUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UVM_FabLabUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -189,21 +169,8 @@
 			isa = PBXGroup;
 			children = (
 				BFDE6F3A222DB89A00914696 /* Gobold_Bold.ttf */,
-				BFDE6F3E222DBADF00914696 /* Gobold Regular.ttf */,
-				BFDE6F40222DBAF200914696 /* Gobold Bold Italic.ttf */,
-				BFDE6F43222DBB1100914696 /* Brown-Bold.ttf */,
-				BFDE6F44222DBB1100914696 /* Brown-BoldItalic.ttf */,
-				BFDE6F45222DBB1100914696 /* Brown-Light.ttf */,
-				BF366A5C2261111D00284DFF /* Raleway-Medium.ttf */,
-				BF366A5D2261112A00284DFF /* Raleway-Light.ttf */,
-				BFDE6F42222DBB1100914696 /* Brown-LightItalic.ttf */,
-				BFDE6F46222DBB1100914696 /* Brown-RegularItalic.ttf */,
-				BF366A5B2261111400284DFF /* Raleway-MediumItalic.ttf */,
 				BF366A5A2261110A00284DFF /* Raleway-Regular.ttf */,
 				BFDE6F3C222DB8B900914696 /* Brown-Regular.ttf */,
-				BF366A5E2261114C00284DFF /* Raleway-LightItalic.ttf */,
-				BF366A59226110E200284DFF /* Raleway-Thin.ttf */,
-				BF366A58226110C300284DFF /* Raleway-ThinItalic.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -316,16 +283,9 @@
 			files = (
 				BFA1A694222CBAC200D9B167 /* LaunchScreen.storyboard in Resources */,
 				BF0B65E4222CCD49007693B8 /* Assets.xcassets in Resources */,
-				BFDE6F4A222DBB1100914696 /* Brown-Light.ttf in Resources */,
 				BFDE6F3B222DB89A00914696 /* Gobold_Bold.ttf in Resources */,
-				BFDE6F4B222DBB1100914696 /* Brown-RegularItalic.ttf in Resources */,
-				BFDE6F3F222DBADF00914696 /* Gobold Regular.ttf in Resources */,
-				BFDE6F47222DBB1100914696 /* Brown-LightItalic.ttf in Resources */,
-				BFDE6F48222DBB1100914696 /* Brown-Bold.ttf in Resources */,
-				BFDE6F49222DBB1100914696 /* Brown-BoldItalic.ttf in Resources */,
 				BFDE6F3D222DB8B900914696 /* Brown-Regular.ttf in Resources */,
 				BFA1A68F222CBABB00D9B167 /* Main.storyboard in Resources */,
-				BFDE6F41222DBAF200914696 /* Gobold Bold Italic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
