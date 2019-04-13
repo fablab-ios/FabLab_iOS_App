@@ -11,6 +11,8 @@ import UIKit
 class TicketTableViewController: UITableViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     
+    let fabWebAPI = FabWebAPI()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

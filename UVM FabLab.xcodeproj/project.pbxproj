@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		13A90314477228F7E416E94B /* Pods_UVM_FabLab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A5BA8EB972FF268697CE77 /* Pods_UVM_FabLab.framework */; };
 		2513D45422628D3F0032AA8F /* SearchBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2513D45322628D3F0032AA8F /* SearchBarDelegate.swift */; };
+		2513D456226295CB0032AA8F /* FabWebAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2513D455226295CB0032AA8F /* FabWebAPI.swift */; };
 		BF0B65E4222CCD49007693B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF0B65E3222CCD49007693B8 /* Assets.xcassets */; };
 		BF0BCCFC22551757008942B6 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0BCCFB22551757008942B6 /* InfoViewController.swift */; };
 		BF4DE10622417CF100C80898 /* TicketTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4DE10522417CF100C80898 /* TicketTableViewController.swift */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		2513D45322628D3F0032AA8F /* SearchBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarDelegate.swift; sourceTree = "<group>"; };
+		2513D455226295CB0032AA8F /* FabWebAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FabWebAPI.swift; sourceTree = "<group>"; };
 		82A5BA8EB972FF268697CE77 /* Pods_UVM_FabLab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UVM_FabLab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FB224CEF6D068047ECBB622 /* Pods-UVM FabLab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UVM FabLab.debug.xcconfig"; path = "Target Support Files/Pods-UVM FabLab/Pods-UVM FabLab.debug.xcconfig"; sourceTree = "<group>"; };
 		BF0B65E3222CCD49007693B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 		2513D44F226287780032AA8F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2513D455226295CB0032AA8F /* FabWebAPI.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -391,6 +394,7 @@
 			files = (
 				2513D45422628D3F0032AA8F /* SearchBarDelegate.swift in Sources */,
 				BFA1A688222CBABB00D9B167 /* AppDelegate.swift in Sources */,
+				2513D456226295CB0032AA8F /* FabWebAPI.swift in Sources */,
 				BF4DE10622417CF100C80898 /* TicketTableViewController.swift in Sources */,
 				BF0BCCFC22551757008942B6 /* InfoViewController.swift in Sources */,
 			);
