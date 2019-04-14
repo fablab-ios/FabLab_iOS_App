@@ -17,7 +17,7 @@ class FabWebAPI {
     
     func getTickets(searchTerm: String, callback: @escaping ([Ticket]) -> ()) {
         dataTask?.cancel()
-        if var urlComponents = URLComponents(string: "http://10.245.78.28:5000/tickets?filter=" + searchTerm) {
+        if var urlComponents = URLComponents(string: "http://www.goatgoose.com:5001/tickets?filter=" + searchTerm) {
             guard let url = urlComponents.url else { return }
             dataTask = defaultSession.dataTask(with: url) { data, response, error in
                 defer { self.dataTask = nil }
