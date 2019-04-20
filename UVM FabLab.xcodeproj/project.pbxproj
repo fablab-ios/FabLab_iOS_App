@@ -577,13 +577,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3ARW4XAJY4;
+				DEVELOPMENT_TEAM = RJPG9JLTQ3;
 				INFOPLIST_FILE = "UVM FabLab/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "IOS.UVM-FabLab";
+				PRODUCT_BUNDLE_IDENTIFIER = "goatgoose.IOS.UVM-FabLab";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -596,13 +596,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3ARW4XAJY4;
+				DEVELOPMENT_TEAM = RJPG9JLTQ3;
 				INFOPLIST_FILE = "UVM FabLab/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "IOS.UVM-FabLab";
+				PRODUCT_BUNDLE_IDENTIFIER = "goatgoose.IOS.UVM-FabLab";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

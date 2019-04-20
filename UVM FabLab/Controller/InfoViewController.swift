@@ -18,6 +18,8 @@ private let mainTxtLabel1 = UILabel()
 private let mainTxtLabel2 = UILabel()
 
 class InfoViewController: UIViewController {
+    
+    let fabWebAPI = FabWebAPI()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,12 +53,10 @@ class InfoViewController: UIViewController {
         infoText.textColor = .black
         infoText.font = UIFont(name: "Raleway-Regular", size: CGFloat(14))
         infoText.numberOfLines = 0
-        let text =  """
-                    Lorem ipsum dolor sit amet, in alia adhuc aperiri nam. Movet scripta tractatos cu eum, sale commodo meliore ea eam, per commodo atomorum ea. Unum graeci iriure nec an, ea sit habeo movet electram. Id eius assum persius pro, id cum falli accusam. Has eu fierent partiendo, doming expetenda interesset cu mel, tempor possit vocent in nam. Iusto tollit ad duo, est at vidit vivendo liberavisse, vide munere nonumy sed ex.
-                            
-                    Quod possit expetendis id qui, consequat vituperata ad eam. Per cu elit latine vivendum. Ei sit nullam aliquam, an ferri epicuri quo. Ex vim tibique accumsan erroribus. In per libris verear adipiscing. Purto aliquid lobortis ea quo, ea utinam oportere qui.
-                    """
-        infoText.text = text + text + text
+        
+        fabWebAPI.getInfo { (info) in
+            infoText.text = info
+        }
         
 //        let labelContainer = UIView()
 //        labelContainer.backgroundColor = #colorLiteral(red: 0.937254902, green: 0.937254902, blue: 0.9568627451, alpha: 1)

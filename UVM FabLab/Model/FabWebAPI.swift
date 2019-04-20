@@ -17,7 +17,7 @@ class FabWebAPI {
     
     func getTickets(searchTerm: String, callback: @escaping ([Ticket]) -> ()) {
         dataTask?.cancel()
-        if var urlComponents = URLComponents(string: "http://www.goatgoose.com:5001/tickets?filter=" + searchTerm) {
+        if var urlComponents = URLComponents(string: "http://www.goatgoose.com:7000/tickets?filter=" + searchTerm) {
             guard let url = urlComponents.url else { return }
             dataTask = defaultSession.dataTask(with: url) { data, response, error in
                 defer { self.dataTask = nil }
@@ -50,6 +50,37 @@ class FabWebAPI {
                         print("parsing error")
                     }
                     
+                }
+            }
+            dataTask?.resume()
+        }
+    }
+    
+    func getInfo(callback: @escaping (String) -> ()) {
+        if var urlComponents = URLComponents(string: "http://www.goatgoose.com:7000/info") {
+            guard let url = urlComponents.url else { return }
+            dataTask = defaultSession.dataTask(with: url) { data, response, error in
+                defer { self.dataTask = nil }
+                if let error = error {
+                    self.errorMessage += "DataTask error: " + error.localizedDescription + "\n"
+                } else if let data = data,
+                    let response = response as? HTTPURLResponse,
+                    response.statusCode == 200 {
+                    do {
+                        let jsonResponse = try JSONSerialization.jsonObject(with: data, options: [])
+                        guard let jsonDict = jsonResponse as? Dictionary<String, String> else {
+                            return
+                        }
+                        
+                        guard let info = jsonDict["info"] else { return }
+                        
+                        DispatchQueue.main.async {
+                            callback(info)
+                        }
+                        
+                    } catch let parsingError {
+                        print("parsing error")
+                    }
                 }
             }
             dataTask?.resume()
