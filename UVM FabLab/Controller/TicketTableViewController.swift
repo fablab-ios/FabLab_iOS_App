@@ -15,10 +15,14 @@ class TicketTableViewController: UITableViewController {
     
     let fabWebAPI = FabWebAPI()
     
+    let notificationManager = (UIApplication.shared.delegate as! AppDelegate).notificationManager
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         searchBar.delegate = self
+        
+        notificationManager.requestAuthorization()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

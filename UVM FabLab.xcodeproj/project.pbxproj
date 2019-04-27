@@ -11,6 +11,7 @@
 		2513D45422628D3F0032AA8F /* SearchBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2513D45322628D3F0032AA8F /* SearchBarDelegate.swift */; };
 		2513D456226295CB0032AA8F /* FabWebAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2513D455226295CB0032AA8F /* FabWebAPI.swift */; };
 		2513D45822629C470032AA8F /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2513D45722629C470032AA8F /* Ticket.swift */; };
+		251512FE2271FDAA00D2A049 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251512FD2271FDAA00D2A049 /* NotificationManager.swift */; };
 		BF0B65E4222CCD49007693B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF0B65E3222CCD49007693B8 /* Assets.xcassets */; };
 		BF0BCCFC22551757008942B6 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0BCCFB22551757008942B6 /* InfoViewController.swift */; };
 		BF4DE10622417CF100C80898 /* TicketTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4DE10522417CF100C80898 /* TicketTableViewController.swift */; };
@@ -44,6 +45,7 @@
 		2513D45322628D3F0032AA8F /* SearchBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarDelegate.swift; sourceTree = "<group>"; };
 		2513D455226295CB0032AA8F /* FabWebAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FabWebAPI.swift; sourceTree = "<group>"; };
 		2513D45722629C470032AA8F /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
+		251512FD2271FDAA00D2A049 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		82A5BA8EB972FF268697CE77 /* Pods_UVM_FabLab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UVM_FabLab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FB224CEF6D068047ECBB622 /* Pods-UVM FabLab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UVM FabLab.debug.xcconfig"; path = "Target Support Files/Pods-UVM FabLab/Pods-UVM FabLab.debug.xcconfig"; sourceTree = "<group>"; };
 		BF0B65E3222CCD49007693B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				2513D455226295CB0032AA8F /* FabWebAPI.swift */,
+				251512FD2271FDAA00D2A049 /* NotificationManager.swift */,
 				2513D45722629C470032AA8F /* Ticket.swift */,
 			);
 			path = Model;
@@ -283,6 +286,11 @@
 				TargetAttributes = {
 					BFA1A683222CBABB00D9B167 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					BFA1A699222CBAC200D9B167 = {
 						CreatedOnToolsVersion = 10.1;
@@ -399,6 +407,7 @@
 				2513D45822629C470032AA8F /* Ticket.swift in Sources */,
 				BFA1A688222CBABB00D9B167 /* AppDelegate.swift in Sources */,
 				2513D456226295CB0032AA8F /* FabWebAPI.swift in Sources */,
+				251512FE2271FDAA00D2A049 /* NotificationManager.swift in Sources */,
 				BF4DE10622417CF100C80898 /* TicketTableViewController.swift in Sources */,
 				BF0BCCFC22551757008942B6 /* InfoViewController.swift in Sources */,
 			);
