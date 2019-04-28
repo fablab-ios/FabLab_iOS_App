@@ -9,34 +9,49 @@
 import UIKit
 
 class TicketTableViewController: UITableViewController {
-    @IBOutlet weak var searchBar: UISearchBar!
     
+    var email = ""
     var tickets: [Ticket] = []
-    
-    let fabWebAPI = FabWebAPI()
-    
+    let fabWebAPI = (UIApplication.shared.delegate as! AppDelegate).fabWebAPI
     let notificationManager = (UIApplication.shared.delegate as! AppDelegate).notificationManager
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        searchBar.delegate = self
-        
-        notificationManager.requestAuthorization()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-
-    // MARK: - Table view data source
+    
+    @IBAction func emailButtonTouch(_ sender: Any) {
+        // https://stackoverflow.com/questions/26567413/get-input-value-from-textfield-in-ios-alert-in-swift
+        let alert = UIAlertController(title: "FabLab Email", message: "Enter the email used to submit your FabLab tickets.", preferredStyle: .alert)
+        
+        alert.addTextField { (textField) in
+            textField.text = ""
+        }
+        
+        alert.addAction(UIAlertAction(title: "Submit", style: .default, handler: { [weak alert] (_) in
+            let textField = alert?.textFields![0]
+            self.email = textField!.text!
+            self.notificationManager.email = self.email
+            self.refresh()
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func refreshButtonTouch(_ sender: Any) {
+        self.refresh()
+    }
+    
+    func refresh() {
+        fabWebAPI.getTickets(searchTerm: self.email) { (tickets) in
+            self.tickets = tickets
+            self.tableView.reloadData()
+        }
+    }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    // number of tickets
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tickets.count
     }
@@ -46,66 +61,18 @@ class TicketTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let intArray = [3, 4, 5, 0]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "LabelCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LabelCell", for: indexPath) as! TicketTableViewCell
         
-        cell.textLabel?.text = "\(tickets[indexPath.row].studentName)"
-        let progressView = UIProgressView(progressViewStyle: .default)
-        //setting height of progressView
-        progressView.frame = CGRect(x: 230, y: 20, width: 130, height: 130)
-        //progressView.progress += 2
-        progressView.rightAnchor.accessibilityActivate()
-        progressView.setProgress(Float(intArray.randomElement()!), animated: false)
-        progressView.progressTintColor = #colorLiteral(red: 0, green: 0.4431372549, blue: 0.3333333333, alpha: 1)
-        cell.contentView.addSubview(progressView)
-        
+        let ticket = tickets[indexPath.row]
+        cell.idLabel?.text = "#" + String(ticket.ticketNumber)
+        cell.nameLabel?.text = ticket.ticketName
+        cell.statusLabel?.text = ticket.status
         
         return cell
     }
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 84
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

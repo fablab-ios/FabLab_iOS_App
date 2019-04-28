@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     let locationManager = CLLocationManager()
     let notificationManager = NotificationManager()
+    let fabWebAPI = FabWebAPI()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
@@ -27,6 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
+        
+        notificationManager.requestAuthorization()
         
         return true
     }
