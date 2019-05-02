@@ -89,6 +89,7 @@ class FabWebAPI {
     
     func getNotifications(searchTerm: String, callback: @escaping ([Notification]) -> ()) {
         dataTask?.cancel()
+        print(self.url + "/notifications/" + searchTerm)
         if var urlComponents = URLComponents(string: self.url + "/notifications/" + searchTerm) {
             guard let url = urlComponents.url else { return }
             dataTask = defaultSession.dataTask(with: url) { data, response, error in

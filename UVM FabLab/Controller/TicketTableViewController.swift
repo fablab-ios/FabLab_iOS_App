@@ -13,10 +13,12 @@ class TicketTableViewController: UITableViewController {
     var email = ""
     var tickets: [Ticket] = []
     let fabWebAPI = (UIApplication.shared.delegate as! AppDelegate).fabWebAPI
+    
     let notificationManager = (UIApplication.shared.delegate as! AppDelegate).notificationManager
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.notificationManager.fetchAndDisplay()
     }
     
     @IBAction func emailButtonTouch(_ sender: Any) {
@@ -30,7 +32,7 @@ class TicketTableViewController: UITableViewController {
         alert.addAction(UIAlertAction(title: "Submit", style: .default, handler: { [weak alert] (_) in
             let textField = alert?.textFields![0]
             self.email = textField!.text!
-            self.notificationManager.email = self.email
+            self.notificationManager.setEmail(email: self.email)
             self.refresh()
         }))
         

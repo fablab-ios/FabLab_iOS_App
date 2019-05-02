@@ -15,7 +15,7 @@ class NotificationManager: NSObject, CLLocationManagerDelegate {
     
     let notificationCenter = UNUserNotificationCenter.current()
     var fabWebAPI = FabWebAPI()
-    lazy var email = ""
+    var email = ""
     
     var count = 0
     
@@ -50,7 +50,6 @@ class NotificationManager: NSObject, CLLocationManagerDelegate {
         let request = UNNotificationRequest(identifier: identifier,
                                             content: content, trigger: trigger)
         notificationCenter.add(request, withCompletionHandler: { (error) in
-            print("test")
             if let error = error {
                 print(error)
             }
@@ -75,5 +74,9 @@ class NotificationManager: NSObject, CLLocationManagerDelegate {
                 print(error)
             }
         })
+    }
+    
+    func setEmail(email: String) {
+        self.email = email
     }
 }
