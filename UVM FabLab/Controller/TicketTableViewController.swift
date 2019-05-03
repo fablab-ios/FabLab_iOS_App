@@ -8,19 +8,36 @@
 
 import UIKit
 
-class TicketTableViewController: UITableViewController {
-    
+class TicketTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
+    @IBOutlet weak var header: UITextField!
+    var refreshControl = UIRefreshControl()
+    let cellReuseIdentifier = "cell"
     var email = ""
     var tickets: [Ticket] = []
     let fabWebAPI = (UIApplication.shared.delegate as! AppDelegate).fabWebAPI
     
     let notificationManager = (UIApplication.shared.delegate as! AppDelegate).notificationManager
     
+    @IBOutlet var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.notificationManager.fetchAndDisplay()
+                
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        // set up the refresh control
+        self.refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.addTarget(self, action: #selector(handleRefresh), for: .valueChanged)
+        self.tableView.addSubview(self.refreshControl)
     }
-    
+    @objc func handleRefresh(refreshControl: UIRefreshControl) {
+        // Do some reloading of data and update the table view's data source
+        // Fetch more objects from a web service, for example...
+        self.refresh()
+        self.refreshControl.endRefreshing()
+    }
     @IBAction func emailButtonTouch(_ sender: Any) {
         // https://stackoverflow.com/questions/26567413/get-input-value-from-textfield-in-ios-alert-in-swift
         let alert = UIAlertController(title: "FabLab Email", message: "Enter the email used to submit your FabLab tickets.", preferredStyle: .alert)
@@ -39,9 +56,7 @@ class TicketTableViewController: UITableViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
-    @IBAction func refreshButtonTouch(_ sender: Any) {
-        self.refresh()
-    }
+
     
     func refresh() {
         fabWebAPI.getTickets(searchTerm: self.email) { (tickets) in
@@ -50,31 +65,51 @@ class TicketTableViewController: UITableViewController {
         }
     }
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tickets.count
     }
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Tickets"
-    }
+//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        return "Tickets"
+//    }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "LabelCell", for: indexPath) as! TicketTableViewCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: TicketTableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "cell") as! TicketTableViewCell
+        
+        let created =  UIImage(named: "created")
+        let waiting =  UIImage(named: "waiting_on_input")
+        let ready =  UIImage(named: "ready_for_pickup")
+        let closed =  UIImage(named: "closed")
         
         let ticket = tickets[indexPath.row]
-        cell.idLabel?.text = "#" + String(ticket.ticketNumber)
-        cell.nameLabel?.text = ticket.ticketName
-        cell.statusLabel?.text = ticket.status
+//        cell.numberLabel?.text = "#" + String(ticket.ticketNumber)
+//        cell.nameLabel?.text = ticket.ticketName
+        cell.numberLabel.text = "Ticket: " + "\(ticket.ticketNumber)"
+        cell.nameLabel.text = "Client Name: " + "\(ticket.status)"
+        cell.TicketNameLabel.text = "Ticket Name: " + "\(ticket.ticketName)"
+        cell.dateLabel.text = "Date Submitted: " + "\(ticket.date)"
+        //cell.status?.text = ticket.status
+
+        if("\(ticket.status)" == "Waiting on client input"){
+            cell.myImageView.image =  ready
+        }else if("\(ticket.status)" == "Ready for pickup"){
+            cell.myImageView.image =  ready
+        }else if("\(ticket.status)" == "Closed"){
+            cell.myImageView.image =  closed
+        }else{
+            cell.myImageView.image = created
+        }
+
         
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 84
-    }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 84
+//    }
 
 }
