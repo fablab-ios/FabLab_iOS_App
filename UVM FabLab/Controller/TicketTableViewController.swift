@@ -10,6 +10,7 @@ import UIKit
 
 class TicketTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
     @IBOutlet weak var header: UITextField!
+    @IBOutlet var textView: UITextView!
     var refreshControl = UIRefreshControl()
     let cellReuseIdentifier = "cell"
     var email = ""
@@ -27,8 +28,12 @@ class TicketTableViewController: UIViewController, UITableViewDelegate, UITableV
         tableView.delegate = self
         tableView.dataSource = self
         
+        let attributedString = NSMutableAttributedString(string: "To submit a ticket, fill out the form at http://uvmfablab.net/contact/")
+        attributedString.addAttribute(.link, value: "http://www.uvmfablab.net/contact/", range: NSRange(location: 41, length: 29))
+        
+        textView.attributedText = attributedString
+        
         // set up the refresh control
-        self.refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
         refreshControl.addTarget(self, action: #selector(handleRefresh), for: .valueChanged)
         self.tableView.addSubview(self.refreshControl)
     }
@@ -86,16 +91,20 @@ class TicketTableViewController: UIViewController, UITableViewDelegate, UITableV
         let closed =  UIImage(named: "closed")
         
         let ticket = tickets[indexPath.row]
-//        cell.numberLabel?.text = "#" + String(ticket.ticketNumber)
-//        cell.nameLabel?.text = ticket.ticketName
-        cell.numberLabel.text = "Ticket: " + "\(ticket.ticketNumber)"
-        cell.nameLabel.text = "Client Name: " + "\(ticket.status)"
-        cell.TicketNameLabel.text = "Ticket Name: " + "\(ticket.ticketName)"
-        cell.dateLabel.text = "Date Submitted: " + "\(ticket.date)"
-        //cell.status?.text = ticket.status
 
+        cell.numberLabel.text = "Ticket #" + "\(ticket.ticketNumber)"
+        cell.TicketNameLabel.text = "\(ticket.ticketName)"
+        cell.dateLabel.text = "Date Submitted: " + "\(ticket.date)"
+        
+        cell.numberLabel.textColor = #colorLiteral(red: 0, green: 0.4431372549, blue: 0.3333333333, alpha: 1)
+        cell.numberLabel.font = UIFont(name: "GoboldBold", size: CGFloat(13))
+        cell.TicketNameLabel.textColor = #colorLiteral(red: 0, green: 0.4431372549, blue: 0.3333333333, alpha: 1)
+        cell.TicketNameLabel.font = UIFont(name: "GoboldBold", size: CGFloat(16))
+        cell.dateLabel.textColor = #colorLiteral(red: 0, green: 0.4431372549, blue: 0.3333333333, alpha: 1)
+        cell.dateLabel.font = UIFont(name: "GoboldBold", size: CGFloat(13))
+        
         if("\(ticket.status)" == "Waiting on client input"){
-            cell.myImageView.image =  ready
+            cell.myImageView.image =  waiting
         }else if("\(ticket.status)" == "Ready for pickup"){
             cell.myImageView.image =  ready
         }else if("\(ticket.status)" == "Closed"){
@@ -107,9 +116,9 @@ class TicketTableViewController: UIViewController, UITableViewDelegate, UITableV
         
         return cell
     }
-    
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 84
-//    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 140
+    }
 
 }
