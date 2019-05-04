@@ -90,11 +90,11 @@ class TicketTableViewController: UIViewController, UITableViewDelegate, UITableV
         let ready =  UIImage(named: "ready_for_pickup")
         let closed =  UIImage(named: "closed")
         
-        let ticket = tickets[indexPath.row]
+        let ticket = tickets[tickets.count - indexPath.row - 1]
 
-        cell.numberLabel.text = "Ticket #" + "\(ticket.ticketNumber)"
+        cell.numberLabel.text = "#" + "\(ticket.ticketNumber)"
         cell.TicketNameLabel.text = "\(ticket.ticketName)"
-        cell.dateLabel.text = "Date Submitted: " + "\(ticket.date)"
+        cell.dateLabel.text = "\(ticket.date)"
         
         cell.numberLabel.textColor = #colorLiteral(red: 0, green: 0.4431372549, blue: 0.3333333333, alpha: 1)
         cell.numberLabel.font = UIFont(name: "GoboldBold", size: CGFloat(13))

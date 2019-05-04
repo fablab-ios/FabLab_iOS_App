@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -68,23 +68,23 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NFn-00-Wym">
-                                                    <rect key="frame" x="30" y="82" width="307" height="102"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NFn-00-Wym">
+                                                    <rect key="frame" x="32" y="87" width="311" height="102"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BiN-MT-FVf">
-                                                    <rect key="frame" x="37" y="40" width="135" height="16"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vtn-fi-CsC">
-                                                    <rect key="frame" x="37" y="61" width="135" height="16"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BiN-MT-FVf">
+                                                    <rect key="frame" x="310" y="19" width="33" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2nd-ID-Sdp">
-                                                    <rect key="frame" x="37" y="19" width="135" height="16"/>
+                                                    <rect key="frame" x="32" y="19" width="33" height="16"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vtn-fi-CsC">
+                                                    <rect key="frame" x="32" y="43" width="33" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -92,19 +92,15 @@
                                             </subviews>
                                             <color key="backgroundColor" red="0.79607843137254897" green="0.88235294117647056" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="BiN-MT-FVf" secondAttribute="trailing" constant="203" id="3MM-6o-McT"/>
+                                                <constraint firstItem="BiN-MT-FVf" firstAttribute="top" secondItem="xHm-72-2PU" secondAttribute="topMargin" constant="8" id="0Oy-qC-1FB"/>
+                                                <constraint firstItem="2nd-ID-Sdp" firstAttribute="leading" secondItem="xHm-72-2PU" secondAttribute="leadingMargin" constant="17" id="2yI-Ea-O7o"/>
                                                 <constraint firstItem="2nd-ID-Sdp" firstAttribute="top" secondItem="xHm-72-2PU" secondAttribute="topMargin" constant="8" id="5AX-NH-viD"/>
-                                                <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Vtn-fi-CsC" secondAttribute="trailing" constant="203" id="7sI-6s-hnz"/>
-                                                <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="2nd-ID-Sdp" secondAttribute="trailing" constant="203" id="8KN-zU-Aja"/>
-                                                <constraint firstItem="Vtn-fi-CsC" firstAttribute="leading" secondItem="xHm-72-2PU" secondAttribute="leading" constant="37" id="9LT-pH-A7A"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="NFn-00-Wym" secondAttribute="bottom" constant="5" id="EgV-Kx-9kk"/>
-                                                <constraint firstItem="BiN-MT-FVf" firstAttribute="top" secondItem="2nd-ID-Sdp" secondAttribute="bottom" constant="5" id="bVS-Ac-fQw"/>
-                                                <constraint firstItem="2nd-ID-Sdp" firstAttribute="leading" secondItem="xHm-72-2PU" secondAttribute="leading" constant="37" id="cVf-ZN-ePN"/>
-                                                <constraint firstItem="NFn-00-Wym" firstAttribute="leading" secondItem="xHm-72-2PU" secondAttribute="leadingMargin" constant="15" id="ddd-fT-HNl"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="NFn-00-Wym" secondAttribute="trailing" constant="23" id="hzZ-tl-TnX"/>
-                                                <constraint firstItem="Vtn-fi-CsC" firstAttribute="top" secondItem="BiN-MT-FVf" secondAttribute="bottom" constant="5" id="jhj-WG-OKh"/>
-                                                <constraint firstItem="NFn-00-Wym" firstAttribute="top" secondItem="Vtn-fi-CsC" secondAttribute="bottom" constant="5" id="oxd-rZ-KDk"/>
-                                                <constraint firstItem="BiN-MT-FVf" firstAttribute="leading" secondItem="xHm-72-2PU" secondAttribute="leading" constant="37" id="tB0-av-WvD"/>
+                                                <constraint firstItem="Vtn-fi-CsC" firstAttribute="leading" secondItem="xHm-72-2PU" secondAttribute="leadingMargin" constant="17" id="IR3-da-vak"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="BiN-MT-FVf" secondAttribute="trailing" constant="17" id="KHn-OI-cxa"/>
+                                                <constraint firstItem="Vtn-fi-CsC" firstAttribute="top" secondItem="2nd-ID-Sdp" secondAttribute="bottom" constant="8" id="l3E-fs-h4k"/>
+                                                <constraint firstItem="NFn-00-Wym" firstAttribute="leading" secondItem="xHm-72-2PU" secondAttribute="leadingMargin" constant="17" id="rut-3B-FG8"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="NFn-00-Wym" secondAttribute="trailing" constant="17" id="v2R-Wj-dnw"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
