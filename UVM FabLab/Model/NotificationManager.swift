@@ -20,6 +20,12 @@ class NotificationManager: NSObject, CLLocationManagerDelegate {
     var count = 0
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        print("location updated")
+        self.fetchAndDisplay()
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
+        print("heading updated")
         self.fetchAndDisplay()
     }
     
@@ -32,6 +38,7 @@ class NotificationManager: NSObject, CLLocationManagerDelegate {
     func fetchAndDisplay() {
         fabWebAPI.getNotifications(searchTerm: self.email) { (notifications) in
             for notification in notifications {
+                print(notification)
                 self.displayNotification(title: notification.title, body: notification.message)
             }
         }
@@ -43,7 +50,7 @@ class NotificationManager: NSObject, CLLocationManagerDelegate {
         content.body = body
         content.sound = UNNotificationSound.default
         
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10,
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1,
                                                         repeats: false)
         
         let identifier = "UYLLocalNotification"
